@@ -325,7 +325,7 @@ def demo_retrieval(rag: HRPolicyRAG, query: str, top_k: int = 3) -> None:
 if __name__ == "__main__":
     """
     Main execution block - Build index and demonstrate retrieval
-    """from pathlib import Path
+    """
 
     BASE_DIR = Path(__file__).resolve().parent
 

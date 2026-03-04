@@ -1,8 +1,11 @@
 import os
 from docx import Document
+from pathlib import Path
 
-INPUT_DIR = "C:/Users/Aleena/Documents/hr_assistant/policies"
-OUTPUT_DIR = "C:/Users/Aleena/Documents/hr_assistant/cleaned_texts"
+BASE_DIR = Path(__file__).resolve().parent
+
+INPUT_DIR = BASE_DIR / "policies"
+OUTPUT_DIR = BASE_DIR / "cleaned_texts"
 
 os.makedirs(OUTPUT_DIR, exist_ok=True)
 

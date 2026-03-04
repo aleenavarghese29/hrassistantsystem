@@ -1,7 +1,9 @@
 import os
 import re
+from pathlib import Path
 
-INPUT_DIR = r"C:/Users/Aleena/Documents/hr_assistant/cleaned_texts"
+BASE_DIR = Path(__file__).resolve().parent
+INPUT_DIR = BASE_DIR / "cleaned_texts"
 
 
 # 1. Clean text while preserving critical values (detective work!)
