@@ -325,13 +325,14 @@ def demo_retrieval(rag: HRPolicyRAG, query: str, top_k: int = 3) -> None:
 if __name__ == "__main__":
     """
     Main execution block - Build index and demonstrate retrieval
-    """
-    
-    # Configuration
-    CHUNK_JSON_PATH = r"C:\Users\Aleena\Documents\hr_assistant\chunks\policy_chunks.json"
-    OUTPUT_DIR = r"C:\Users\Aleena\Documents\hr_assistant\index"
-    MODEL_NAME = r"C:\Users\Aleena\Documents\hr_assistant\models\all-MiniLM-L6-v2"  # Using offline model
-    
+    """from pathlib import Path
+
+    BASE_DIR = Path(__file__).resolve().parent
+
+    CHUNK_JSON_PATH = BASE_DIR / "chunks" / "policy_chunks.json"
+    OUTPUT_DIR = BASE_DIR / "index"
+    MODEL_NAME = BASE_DIR / "models" / "all-MiniLM-L6-v2"
+        
    
     try:
         # Build the index

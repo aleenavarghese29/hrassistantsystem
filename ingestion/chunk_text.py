@@ -2,8 +2,11 @@ import os
 import re
 import json
 
-CLEANED_DIR = r"C:\Users\Aleena\Documents\hr_assistant\cleaned_texts"
-OUTPUT_DIR = r"C:\Users\Aleena\Documents\hr_assistant\chunks"
+from pathlib import Path
+
+BASE_DIR = Path(__file__).resolve().parent
+CLEANED_DIR = BASE_DIR / "cleaned_texts"
+OUTPUT_DIR = BASE_DIR / "chunks"
 
 os.makedirs(OUTPUT_DIR, exist_ok=True)
 
